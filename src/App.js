@@ -3,7 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+// import NavDropdown from 'react-bootstrap/NavDropdown';
 
 import {
   BrowserRouter as Router,
@@ -13,6 +13,7 @@ import {
 
 function App() {
   const Game = lazy(() => import('./game/Game'));
+  const DataManipulation = lazy(() => import('./review/DataManipulation'));
 
   return (
     <div className="App">
@@ -34,6 +35,9 @@ function App() {
           <Switch>
             <Route path="/game">
               <Game />
+            </Route>
+            <Route path="/DataManipulation">
+              <DataManipulation />
             </Route>
           </Switch>
         </Suspense>
